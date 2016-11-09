@@ -68,7 +68,7 @@ def check_wall_front():
     distance = [0, 0, 0]
     # 距離取得
     distance = get_distance()
-    print "Front_Dis =", distance[FRONT_DIRECTION]
+    #print "Front_Dis =", distance[FRONT_DIRECTION]
     # 壁ありなし判定
     if distance[FRONT_DIRECTION] > FRONT_THRESHOLD:
         return WALL_ON	# 壁あり
@@ -82,7 +82,7 @@ def check_wall_left():
     distance = [0, 0, 0]
     # 距離取得
     distance = get_distance()
-    print "Left_Dis =", distance[LEFT_DIRECTION]
+    #print "Left_Dis =", distance[LEFT_DIRECTION]
     # 壁ありなし判定
     if distance[LEFT_DIRECTION] > LEFT_THRESHOLD:
         return WALL_ON	# 壁あり
@@ -96,7 +96,7 @@ def check_wall_right():
     distance = [0, 0, 0]
     # 距離取得
     distance = get_distance()
-    print "Right_Dis =", distance[RIGHT_DIRECTION]
+    #print "Right_Dis =", distance[RIGHT_DIRECTION]
     # 壁ありなし判定
     if distance[RIGHT_DIRECTION] > RIGHT_THRESHOLD:
         return WALL_ON	# 壁あり
@@ -191,9 +191,9 @@ def test_recognition():
     num = 0
     while True:
         num += 1;
-        print "----------"
-        print "LOOP =",num
-        print "----------"
+        #print "----------"
+        #print "LOOP =",num
+        #print "----------"
 	# LED点灯
         led_state[EXEC_LED_NO] = LED_ON
 	# 前壁チェック(壁あり:LED点灯)
@@ -211,7 +211,7 @@ def test_recognition():
             led_state[RIGHT_LED_NO] = LED_ON
         else:
             led_state[RIGHT_LED_NO] = LED_OFF
-        print "----------"    
+        #print "----------"    
         # LED設定
         mw.led(led_state)
         time.sleep(1)
